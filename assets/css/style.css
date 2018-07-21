@@ -1,0 +1,40 @@
+body {
+    background:#000000e8;
+}
+
+h3 {
+
+color:white;
+font-size:40px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+text-align:center;
+}
+
+button{
+    height:40px;
+    width:80px;
+    background:whitesmoke;
+    margin-top:20px;
+    
+    
+}
+.button_search{
+    text-align: center; 
+}
+.submit{
+    height:30px;
+    width:30px;
+}
+#input{
+    background: url('https://media3.giphy.com/media/OFhB9mzG1hACQ/200w.gif') no-repeat #ffffff;
+        background-position: 98% 50%;
+        background-size:40px 40px;
+}
+
+.more-options-ctn
+{
+color: white;
+text-align:center;
+margin-left: 250px;
+}
+
