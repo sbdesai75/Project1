@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Giffy With It</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
@@ -17,55 +18,72 @@
 </head>
 
 <body>
+
+<div class="container">
+
+    <div class="header">
+        <div id="title">
+            TITLE
+        </div>
+
+    </div>
+
     
-    <div class= "container">
 
         <center>
-        <!--Container for Gifs and Youtube Audio-->
-        
-        <div class="media">
-            <div id= "gifs-display">
-                <!--Placeholder for Gif-->
-                <img src="assets/images/lovemusic.gif">
+
+            <!--Container for Gifs and Youtube Audio-->
+            <div class="media">
+
+                <!--GIF-->
+                <div class="gif-cont">
+
+            <!--ADDED placeholder for Gif/ appends new gif-->
+                    <img src="assets/images/lovemusic.gif" id="placeholder" class="hidden pic">
+                </div>
+
+                <!--Youtube Audio-->
+                <div id="yt-display">
+
+                    <!--For YouTube iFrame-->
+                    <iframe id="video" width="270" height="150" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+
             </div>
-            <div id= "yt-display">
-                <!--For YouTube iFrame-->
-                <iframe id="video" width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+
+            <!--Search for YT Media-->
+            <div class="search">
+                <h3> Enter Keywords:</h3>
+
+                    <p>(Use tags to mash up Gifs with music)</p>
+
+            <!-- ADDDED test GIF search-->
+                <input id="user" type="text" placeholder="Get Giffy With It"></input>
+                <button id="btn">Submit</button>
+     
             </div>
 
-        </div>
-        
+                <!--Search Box
+                <div id="button_search">
+                    <input type="text" id="input" placeholder="Get Giffy With It" style="height:40px; width:350px;"><br>
 
-        <!--Search for Media-->
-        <div class="search">
-            <h3> Enter Keywords:</h3>
-
-            <p>(Use tags to mash up Gifs with music)</p>
-
-        <!--Search Box-->
-            <div id= "button_search">
-                <input type="text" id="input" placeholder="Get Giffy With It" style="height:40px; width:350px;"><br>
+                    - Submit Button -
+                    <button type="submit" class='submit' id="submit"> Submit </button>
                 
-            <!-- Submit Button-->       
-                <button type="submit">
-                    <img src='assets/images/search.jpg' class='submit' id="submit">
-                </button>
-
-            <!--More Options-->
-                <div class="more-options-ctn"><span class="more-options">+ More options</span></div>
+                </div>-->
             
-            </div>
-        </div>
 
         </center>
 
-    
-    </div>   
-   
-    
-       <!--JS/jQ-->
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-       <script src="assets/javascript/app.js"></script>
+
+    </div>
+
+</div>
+
+    <!--JS/jQ-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
 
 </body>
+
 </html>

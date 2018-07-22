@@ -1,6 +1,16 @@
 body {
-    background-color:#000000e8;
+    background-color: grey;
 }
+
+.header {
+    background-color: black;
+    height: 80px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
 
 .media {
     margin-bottom: 10px;
@@ -26,11 +36,9 @@ button{
 }
 
 
-.submit{
-    height:30px;
-    width:30px;
-}
-#input{
+#user{
+    height:40px; 
+    width:350px;
     background: url('../images/200w.gif') no-repeat #ffffff;
         background-position: 98% 50%;
         background-size:40px 40px;
@@ -41,5 +49,19 @@ button{
 color: #ffffff;
 text-align:center;
 margin-left: 250px;
+}
+
+/*#gif-wrap {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background-color: #000;
+	background-size: auto;
+	background-repeat: no-repeat;
+    background-position: center;
+    
 }
 
