@@ -4,24 +4,68 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Giffy With It</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!--Bootstrap
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    -->
+
 </head>
 
 <body>
     
+    <div class= "container">
+
+        <center>
+        <!--Container for Gifs and Youtube Audio-->
+        
+        <div class="media">
+            <div id= "gifs-display">
+                <!--Placeholder for Gif-->
+                <img src="assets/images/lovemusic.gif">
+            </div>
+            <div id= "yt-display">
+                <!--For YouTube iFrame-->
+                <iframe id="video" width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+            </div>
+
+        </div>
+        
+
+        <!--Search for Media-->
+        <div class="search">
+            <h3> Enter Keywords:</h3>
+
+            <p>(Use tags to mash up Gifs with music)</p>
+
+        <!--Search Box-->
+            <div id= "button_search">
+                <input type="text" id="input" placeholder="Get Giffy With It" style="height:40px; width:350px;"><br>
+                
+            <!-- Submit Button-->       
+                <button type="submit">
+                    <img src='assets/images/search.jpg' class='submit' id="submit">
+                </button>
+
+            <!--More Options-->
+                <div class="more-options-ctn"><span class="more-options">+ More options</span></div>
+            
+            </div>
+        </div>
+
+        </center>
+
     
-    <center><img src="http://bestanimations.com/Music/we-love-music-text-sign-animated-gif.gif"></center>
-    <h3>Enter the Keywords</h3><center><input type="text" id="input" placeholder="title for your gif"
-        style="height:40px; width:350px;"></center>
-        <div class="more-options-ctn"><span class="more-options">+ More options</span></div>
-       
-       
-     <div class='button_search'>
-        <button type="submit">
-           <img src='https://www.maketecheasier.com/assets/uploads/2009/07/search-icon.jpg' class='submit'>
-       </button></div>
-       
+    </div>   
+   
+    
+       <!--JS/jQ-->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script src="assets/javascript/app.js"></script>
 
 </body>
 </html>

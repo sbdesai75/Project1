@@ -1,11 +1,14 @@
 body {
-    background:#000000e8;
+    background-color:#000000e8;
 }
 
-h3 {
+.media {
+    margin-bottom: 10px;
+}
+
+h3, p {
 
 color:white;
-font-size:40px;
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 text-align:center;
 }
@@ -21,19 +24,21 @@ button{
 .button_search{
     text-align: center; 
 }
+
+
 .submit{
     height:30px;
     width:30px;
 }
 #input{
-    background: url('https://media3.giphy.com/media/OFhB9mzG1hACQ/200w.gif') no-repeat #ffffff;
+    background: url('../images/200w.gif') no-repeat #ffffff;
         background-position: 98% 50%;
         background-size:40px 40px;
 }
 
 .more-options-ctn
 {
-color: white;
+color: #ffffff;
 text-align:center;
 margin-left: 250px;
 }
