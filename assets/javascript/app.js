@@ -38,8 +38,8 @@ function tplawesome(e, t) {
 function addSound() {
     $("#btn").on('click', function (e) {
         e.preventDefault();
-        var key = $('#user').val();
-        var query = "https://www.googleapis.com/youtube/v3/search?q=" + key + "&key=AIzaSyDj8nQkKtYUX1DyaGo6E43_gywHp4xWoSY" + "&part=snippet&mine=true&videoEmbeddable=true&type=video&" + "music";
+        var key = $('#user').val()+ "+songs";
+        var query = "https://www.googleapis.com/youtube/v3/search?q=" + key + "&song&key=AIzaSyDj8nQkKtYUX1DyaGo6E43_gywHp4xWoSY" + "&part=snippet&mine=true&videoEmbeddable=true&type=video&";
 
         $.ajax({
             url: query,
@@ -51,10 +51,10 @@ function addSound() {
                 var results = responseSong.items;
                 //for(i=0;i<=results.length;i++)
                 //{
-                var video = results[0].id.videoId;
+                var video = results[3].id.videoId;
                 const source = "https://www.youtube.com/embed/";
                 console.log(video);
-                $('#video').attr("src", source + video);
+                $('#video').attr("src", source + video +"?autoplay=1");
             
             
         //}
