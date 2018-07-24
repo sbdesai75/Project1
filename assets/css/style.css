@@ -1,11 +1,24 @@
 body {
-    background:#000000e8;
+    background-color: grey;
 }
 
-h3 {
+.header {
+    background-color: black;
+    height: 80px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+
+.media {
+    margin-bottom: 10px;
+}
+
+h3, p {
 
 color:white;
-font-size:40px;
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 text-align:center;
 }
@@ -21,20 +34,34 @@ button{
 .button_search{
     text-align: center; 
 }
-.submit{
-    height:30px;
-    width:30px;
-}
-#input{
-    background: url('https://media3.giphy.com/media/OFhB9mzG1hACQ/200w.gif') no-repeat #ffffff;
+
+
+#user{
+    height:40px; 
+    width:350px;
+    background: url('../images/200w.gif') no-repeat #ffffff;
         background-position: 98% 50%;
         background-size:40px 40px;
 }
 
 .more-options-ctn
 {
-color: white;
+color: #ffffff;
 text-align:center;
 margin-left: 250px;
+}
+
+/*#gif-wrap {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background-color: #000;
+	background-size: auto;
+	background-repeat: no-repeat;
+    background-position: center;
+    
 }
 
