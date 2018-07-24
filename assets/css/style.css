@@ -51,6 +51,17 @@ text-align:center;
 margin-left: 250px;
 }
 
+.row {
+    height: 300px;;
+}
+
+#placeholder{
+    height: 300px;
+}
+iframe {
+    display: none;
+}
+
 /*#gif-wrap {
 	position: absolute;
 	top: 0;
