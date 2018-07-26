@@ -1,23 +1,23 @@
-$("#btn").on("click", function(event) {
+$("#btn").on("click", function (event) {
     event.preventDefault();
     let formInput = $("#user").val();
     let grabGif = $.get(
-      "https://api.giphy.com/v1/gifs/search?q=" +
+        "https://api.giphy.com/v1/gifs/search?q=" +
         formInput +
         "&api_key=6CjfUAofGjvsi1tn9tiW0Cw4hixSKLFC&limit=1"
     );
-    
+
     let imgTagArray = $(".pic");
-  
-    grabGif.done(function(response) {
-      for (let i = 0; i < response.data.length; i++) {
-        let eachImageUrl = response.data[i].images.original.url;
-        // imageUrlArray.push(eachImageUrl); // push each image as you loop through the response array to the image array
-        imgTagArray[i].setAttribute("src", eachImageUrl); 
-      }
+
+    grabGif.done(function (response) {
+        for (let i = 0; i < response.data.length; i++) {
+            let eachImageUrl = response.data[i].images.original.url;
+            // imageUrlArray.push(eachImageUrl); // push each image as you loop through the response array to the image array
+            imgTagArray[i].setAttribute("src", eachImageUrl);
+        }
     });
-  });
-  
+});
+
 
 
 
@@ -38,7 +38,7 @@ function tplawesome(e, t) {
 function addSound() {
     $("#btn").on('click', function (e) {
         e.preventDefault();
-        var key = $('#user').val()+ "+songs";
+        var key = $('#user').val() + "+songs";
         var query = "https://www.googleapis.com/youtube/v3/search?q=" + key + "&song&key=AIzaSyDj8nQkKtYUX1DyaGo6E43_gywHp4xWoSY" + "&part=snippet&mine=true&videoEmbeddable=true&type=video&";
 
         $.ajax({
@@ -54,28 +54,57 @@ function addSound() {
                 var video = results[3].id.videoId;
                 const source = "https://www.youtube.com/embed/";
                 console.log(video);
-                $('#video').attr("src", source + video +"?autoplay=1");
-            
-            
-        //}
-        
-        
-        
-                        // e.preventDefault();
-                        // var chanelName='uic.ruby';
-                        // var request = gapi.client.youtube.search.list({
-                        //     q: encodeURIComponent($("#input").val()).replace(/%20/g, "+"),
-                        //     order: 'viewcount',
-                        //     part: 'snippet',
-                        //     type: 'video',
-                        //     maxResults: 3,
-                        //     publishedAfter: "2015-01-01T00:00:00Z",
-                        //     forUsername: chanelName
-                        // });
-                        // request.execute(function (response) {
-                        //     console.log(response);
-                        // });
-                    });
+                $('#video').attr("src", source + video + "?autoplay=1");
+
+
+                //}
+
+
+
+                // e.preventDefault();
+                // var chanelName='uic.ruby';
+                // var request = gapi.client.youtube.search.list({
+                //     q: encodeURIComponent($("#input").val()).replace(/%20/g, "+"),
+                //     order: 'viewcount',
+                //     part: 'snippet',
+                //     type: 'video',
+                //     maxResults: 3,
+                //     publishedAfter: "2015-01-01T00:00:00Z",
+                //     forUsername: chanelName
+                // });
+                // request.execute(function (response) {
+                //     console.log(response);
+                // });
             });
-        }
-        addSound();
+    });
+}
+addSound();
+
+$.fn.extend({
+    animateCss: function (animationName, callback) {
+        var animationEnd = (function (el) {
+            var animations = {
+                animation: 'animationend',
+                OAnimation: 'oAnimationEnd',
+                MozAnimation: 'mozAnimationEnd',
+                WebkitAnimation: 'webkitAnimationEnd',
+            };
+
+            for (var t in animations) {
+                if (el.style[t] !== undefined) {
+                    return animations[t];
+                }
+            }
+        })(document.createElement('div'));
+
+        this.addClass('animated ' + animationName).one(animationEnd, function () {
+            $(this).removeClass('animated ' + animationName);
+
+            if (typeof callback === 'function') callback();
+        });
+
+        return this;
+    },
+});
+
+
