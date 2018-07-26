@@ -1,13 +1,29 @@
-body {
-    background-color: grey;
+html body {
+    background-color: rgba(0,0,0,1.00);
+
 }
 
-.header {
+.layout{
+    background-image: url("https://www.worshipbackgroundsforfree.com/wp-content/uploads/2012/11/Screen-shot-2012-11-20-at-8.31.59-AM.png");
+    background-size: cover;
+}
+
+.navbar {
     background-color: black;
     height: 80px;
     color: #ffffff;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.navbar.img {
+    size: 50px 50px;
+}
+
+h1.animated {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 8px 8px 16px pink;
 }
 
 
@@ -26,20 +42,19 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 text-align:center;
 }
 
-button{
+.btn{
     height:40px;
     width:80px;
     background:whitesmoke;
-    margin-top:20px;
+    display: block;
+    margin: auto;
     
     
 }
-.button_search{
-    text-align: center; 
-}
-
 
 #user{
+    display:block;
+    margin: auto;
     height:40px; 
     width:350px;
     background: url('../images/200w.gif') no-repeat #ffffff;
@@ -60,25 +75,13 @@ margin-left: 250px;
 
 #placeholder{
     height: 300px;
+    display: block;
+    margin: auto;
 }
 .iframe {
     visibility: hidden;
 }
 
-/* .gradient {
-    width: 100%;
-    height: 100%;
-    background: repeating-radial-gradient(circle, #7DD279, #7DD279 5px, #7984D2 5px, #7984D2 10px);
-}
-
-
-.multicolor-linear {
-    background: linear-gradient(to left, lime, lime 28px, red 77%, cyan);
-  } */
-
-.lead {
-    color: green;
-}
 
 /* #yt-display { 
     float: center;
@@ -87,23 +90,6 @@ margin-left: 250px;
 
     
 
-/*#gif-wrap {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-	background-color: #000;
-	background-size: auto;
-	background-repeat: no-repeat;
-    background-position: center;
-    
-}*/
-.layout{
-    background-image: url("https://www.worshipbackgroundsforfree.com/wp-content/uploads/2012/11/Screen-shot-2012-11-20-at-8.31.59-AM.png");
-    background-size: cover;
-}
 
 .jumbotron {
     color: blue;
