@@ -1,15 +1,17 @@
 html body {
     /* background-color: rgba(0,0,0,1       00); */
-    background-image: url("https://images4.alphacoders.com/457/4574.jpg");
+    background: url("https://images4.alphacoders.com/457/4574.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    height: 100%;
 }
+
 .navbar {
     background-color: black;
     height: 80px;
     color: #ffffff;
     text-align: center;
-    margin-bottom: 1px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -17,11 +19,21 @@ html body {
     size: 50px 50px;
 }
 
+
 h1.animated {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-shadow: 8px 8px 16px pink;
 }
 
+.form-check {
+    margin-top: 1rem;
+    margin-left: -0.5rem;
+    text-align: center;
+}
+
+.form-check-input {
+    margin-top: 0.45rem;
+}
 
 
 .media {
@@ -54,15 +66,11 @@ text-align:center;
 margin-left: 250px;
 }
 
-.cont {
+/* .cont {
     height: 300px;;
-}
+} */
 
-#placeholder{
-    height: 300px;
-    display: block;
-    margin: auto;
-}
+
 .iframe {
     display: none;
 }
@@ -75,9 +83,7 @@ margin-left: 250px;
     display:none;
 }
 
- /* .needs-validation{
-     margin-left: ;
-    } */
+
 
 #label-front {
     color:white !important;
@@ -161,13 +167,41 @@ code:nth-child(1) a {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px green, 0 0 35px green, 0 0 40px green, 0 0 50pxo green, 0 0 75px green;
     }
 } */
-footer {
+/* footer {
     position: fixed;
-    margin-bottom: 0%;
-}
+    height: 20px;
+} */
 .invalid-feedback {
     text-align: center;
 }
 .valid-feedback{
     text-align:center;
+}
+
+
+
+@media only screen and (min-width: 320px) {
+    #pic {
+        width: 320px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    #pic {
+        width: 320px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+@media only screen and (min-width: 900px) {
+    #pic {
+        width: 100%;
+        max-height: 300px;
+        display: block;
+        margin: 0 auto;
+    }
 }

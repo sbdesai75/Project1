@@ -13,7 +13,7 @@ $("#btn").on("click", function (event) {
         "&api_key=6CjfUAofGjvsi1tn9tiW0Cw4hixSKLFC&limit=1"
     );
     // selects and adds gif to pic div
-    let imgTagArray = $(".pic");
+    let imgTagArray = $("#pic");
     // push each image as you loop through the response array to the image array
 
     grabGif.done(function (response) {

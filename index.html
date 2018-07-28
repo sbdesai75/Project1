@@ -14,16 +14,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-   <!--CSS-->
-   <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
 <body>
-
-
-
-    <nav class="navbar navbar-black bg-black">
+    <nav class="navbar navbar-black bg-black container-fluid">
         <div id="giflogo gradient">
             <p class="animated infinite pulse"><a href="https://sbdesai75.github.io/Project1/">
                 Giffically
@@ -37,139 +36,138 @@
     </nav>
 
 
-    <div class="container">
+    <div class="container background-custom">
         <!-- validating form -->
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col sm 10 container-fluid">
+                <div class="col-sm-10 container-fluid">
                     <div class="form">
-                    <form class="needs-validation" novalidate>
-                        <div class="form-row container-fluid">
-                            <div class="col-md-10 mb-8 container-fluid">
-                                <label class="container-fluid text-center" id="label-front" for="validationCustom01">First name</label>
-                                <input type="text" class="form-control container-fluid" id="validationCustom01" placeholder="First name" required style="width:40%">
-                                <div class="valid-feedback">
-                                    Looks good!
+                        <form class="needs-validation" novalidate>
+                            <div class="form-row container-fluid">
+                                <div class="col-md-10 mb-8 container-fluid">
+                                    <label class="container-fluid text-center" id="label-front" for="validationCustom01">First name</label>
+                                    <input type="text" class="form-control container-fluid" id="validationCustom01" placeholder="First name" required style="width:40%">
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
                                 </div>
-                            </div>
-                            <br>
-                            <br>
-                            <div class="col-md-10 mb-8 container-fluid">
-                                <label class="container-fluid text-center" id="label-front" for="validationCustom02">Last name</label>
-                                <input type="text" class="form-control container-fluid" id="validationCustom02" placeholder="Last name" required style="width:40%" >
-                                <div class="valid-feedback">
-                                    Looks good!
+                                <br>
+                                <br>
+                                <div class="col-md-10 mb-8 container-fluid">
+                                    <label class="container-fluid text-center" id="label-front" for="validationCustom02">Last name</label>
+                                    <input type="text" class="form-control container-fluid" id="validationCustom02" placeholder="Last name" required style="width:40%">
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
                                 </div>
-                            </div>
-                            <br>
+                                <br>
 
-                            <div class="col-md-10 mb-8 container-fluid">
-                                <label class="container-fluid text-center" id="label-front" for="validationCustomUsername">Email</label>
-                                    <input type="email" class="form-control container-fluid" id="validationCustomUsername" placeholder="Email" required style="width: 40%;" >
+                                <div class="col-md-10 mb-8 container-fluid">
+                                    <label class="container-fluid text-center" id="label-front" for="validationCustomUsername">Email</label>
+                                    <input type="email" class="form-control container-fluid" id="validationCustomUsername" placeholder="Email" required style="width: 40%;">
                                     <div class="invalid-feedback">
                                         Please use valid email
                                     </div>
-                                <!-- </div> -->
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-comtrol form-check-input container-fluid" type="checkbox" value="" id="invalidCheck" required>
-                                <label class="form-check-label container-fluid text-center" for="invalidCheck">
-                                    Agree to terms and conditions
-                                </label>
-                                <div class="invalid-feedback">
-                                    You must agree before submitting.
+                                    <!-- </div> -->
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="text-center"><button class="btn btn-success align-center" type="submit" id="validateButton">Submit form</button></div>
-                    </form>
-                    <!-- end of validating form --></div>
-                    <div class="layout">
+                            <div class="form-group">
 
-                        <div class="layout">
-                            <!--Container for Gifs and Youtube Audio-->
-                            <div class="media">
-                                <!--ADDED placeholder for Gif/ appends new gif-->
-                                <img src="assets/images/lovemusic.gif" id="placeholder" class="hidden pic">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                    <label class="form-check-label" for="invalidCheck">
+                                    Agree to terms and conditions
+                                </label>
+                                    <div class="invalid-feedback">
+                                        You must agree before submitting.
+                                    </div>
+                                </div>
                             </div>
 
-                            <!--Youtube Audio-->
-                            <div id="yt-display">
-                                <!--For YouTube iFrame-->
-                                <iframe id="video" width="2" height="1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            </div>
-
-                            <!--Search for YT Media-->
-                            <div class="col-sm-6 container-fluid search">
-                                
-                                <p class="p h6">Enter Word(s) To Create Musically Enhanced Gif</p>
-
-                                <!-- ADDDED test GIF search-->
-                                <input id="user" class="container-fluid" type="text" placeholder="Get Giffy With It"></input>
-                                <br>
-                                <button id="btn" class="btn btn-success container-fluid">Submit</button>
-
-                            </div>
-                            <div class="text-center h4" style="color:whitesmoke;">
-                                Report errors and bugs
-                                <a class="h4" href="https://upli.st/l/giffically" style="color:whitesmoke; text-decoration: underline;">here!</a>
-                            </div>
-                            <br>
-
-                        </div>
+                            <div class="text-center"><button class="btn btn-success align-center" type="submit" id="validateButton">Submit form</button></div>
+                        </form>
+                        <!-- end of validating form -->
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    <nav class="navbar fixed-bottom navbar-black bg-black">
-                    <div class="container-fluid">
-                        <code class="container-fluid">
+
+    <div class="layout">
+
+         <!--Search for YT Media-->
+        <div class="col-sm-4 container-fluid search">
+            <!--Container for Gifs and Youtube Audio-->
+            <div>
+                <!--ADDED placeholder for Gif/ appends new gif-->
+                <img id="pic" src="assets/images/lovemusic.gif">
+            </div>
+
+            <!--Youtube Audio-->
+            <div id="yt-display">
+                <!--For YouTube iFrame-->
+                <iframe id="video" width="2" height="1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <p class="p h6">Enter Word(s) To Create Musically Enhanced Gif</p>
+
+            <!-- ADDDED test GIF search-->
+            <input id="user" class="container-fluid" type="text" placeholder="Get Giffy With It"></input>
+            <br>
+            <button id="btn" class="btn btn-success container-fluid">Submit</button>
+
+        </div>
+        <div class="text-center h4" style="color:whitesmoke;margin-bottom: 12%;">
+            Report errors and bugs
+            <a class="h4" href="https://upli.st/l/giffically" style="color:whitesmoke; text-decoration: underline;">here!</a>
+        </div>
+        <br>
+
+    </div>
+ 
+
+    <nav class="navbar fixed-bottom navbar-black bg-black" style="height: 40px; margin-bottom: 0px;">
+        <div class="container-fluid" style="height: 40px; margin-bottom: 0px;">
+            <code class="container-fluid" style="height: 40px; margin-bottom: 0px;">
                             <a class="navbar-brand" style="color: white;">copyrights&#9400;</a>
                         </code>
-                    </div>
-                    </nav>
+        </div>
+    </nav>
 
 
-                    <script>
-                        // Example starter JavaScript for disabling form submissions if there are invalid fields
-                        (function () {
-                            'use strict';
-                            window.addEventListener('load', function () {
-                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                                var forms = document.getElementsByClassName('needs-validation');
-                                // Loop over them and prevent submission
-                                var validation = Array.prototype.filter.call(forms, function (form) {
-                                    form.addEventListener('submit', function (event) {
-                                        event.preventDefault();
-                                        if (form.checkValidity() === false) {
-                                            event.preventDefault();
-                                            event.stopPropagation();
-                                            console.log('There was a problem')
-                                        }
-                                        else {
-                                            $(".needs-validation").hide();
-                                            $(".layout").show();
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        event.preventDefault();
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            console.log('There was a problem')
+                        }
+                        else {
+                            $(".needs-validation").hide();
+                            $(".layout").show();
 
-                                        }
+                        }
 
-                                        form.classList.add('was-validated');
-                                    }, false);
-                                });
-                            }, false);
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
 
-                        })();
-                    </script>
+        })();
+    </script>
 
-                    <!--JS/jQ-->
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                    <script src="assets/javascript/app.js"></script>
-
+    <!--JS/jQ-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
 </body>
-
-
-
-
-
 </html>
