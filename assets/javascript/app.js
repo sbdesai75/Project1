@@ -1,110 +1,69 @@
+
+//For Giphy
+//On search button click function
 $("#btn").on("click", function (event) {
     event.preventDefault();
+    //search box input
     let formInput = $("#user").val();
+    //for grabbing gif from Giffy
+
     let grabGif = $.get(
         "https://api.giphy.com/v1/gifs/search?q=" +
         formInput +
         "&api_key=6CjfUAofGjvsi1tn9tiW0Cw4hixSKLFC&limit=1"
     );
-
+    // selects and adds gif to pic div
     let imgTagArray = $(".pic");
+    // push each image as you loop through the response array to the image array
 
     grabGif.done(function (response) {
+        console.log(response);
         for (let i = 0; i < response.data.length; i++) {
             let eachImageUrl = response.data[i].images.original.url;
-            // imageUrlArray.push(eachImageUrl); // push each image as you loop through the response array to the image array
+            // setInterval(eachImageUrl,2000);
             imgTagArray[i].setAttribute("src", eachImageUrl);
         }
     });
 });
 
-
-
-
-
-//For YOUTUBE 
-
-function tplawesome(e, t) {
-    res = e;
-    for (var n = 0; n < t.length; n++) {
-        res = res.replace(/\{\{(.*?)\}\}/g, function (e, r) {
-            return t[n][r]
-        }
-        )
-    }
-    return res
-}
-
 function addSound() {
+    // on every click of button a following function will execute
     $("#btn").on('click', function (e) {
         e.preventDefault();
+
+        // variable key stores the user input it will add a keyword songs in the end of every search, So that it will brings up songs only from youtube
         var key = $('#user').val() + "+songs";
+
+        // variable query stores api key and other keywords and their values 
         var query = "https://www.googleapis.com/youtube/v3/search?q=" + key + "&song&key=AIzaSyDj8nQkKtYUX1DyaGo6E43_gywHp4xWoSY" + "&part=snippet&mine=true&videoEmbeddable=true&type=video&";
 
+        // ajax call
         $.ajax({
             url: query,
             method: 'GET',
 
         })
             .then(function (responseSong) {
-                console.log(responseSong);
+
+                // to check the object
+                // console.log(responseSong);
                 var results = responseSong.items;
-                //for(i=0;i<=results.length;i++)
-                //{
+
+                // variable video to store video id and always bring up the fourth result from youtube
                 var video = results[3].id.videoId;
+
+                // source variable contains the constant url for every search
                 const source = "https://www.youtube.com/embed/";
-                console.log(video);
+
+                // to test id obtained from object with every search
+                // console.log(video);
+
+                // autoplay is set true to play video without click
                 $('#video').attr("src", source + video + "?autoplay=1");
-
-
-                //}
-
-
-
-                // e.preventDefault();
-                // var chanelName='uic.ruby';
-                // var request = gapi.client.youtube.search.list({
-                //     q: encodeURIComponent($("#input").val()).replace(/%20/g, "+"),
-                //     order: 'viewcount',
-                //     part: 'snippet',
-                //     type: 'video',
-                //     maxResults: 3,
-                //     publishedAfter: "2015-01-01T00:00:00Z",
-                //     forUsername: chanelName
-                // });
-                // request.execute(function (response) {
-                //     console.log(response);
-                // });
             });
     });
 }
 addSound();
 
-$.fn.extend({
-    animateCss: function (animationName, callback) {
-        var animationEnd = (function (el) {
-            var animations = {
-                animation: 'animationend',
-                OAnimation: 'oAnimationEnd',
-                MozAnimation: 'mozAnimationEnd',
-                WebkitAnimation: 'webkitAnimationEnd',
-            };
-
-            for (var t in animations) {
-                if (el.style[t] !== undefined) {
-                    return animations[t];
-                }
-            }
-        })(document.createElement('div'));
-
-        this.addClass('animated ' + animationName).one(animationEnd, function () {
-            $(this).removeClass('animated ' + animationName);
-
-            if (typeof callback === 'function') callback();
-        });
-
-        return this;
-    },
-});
 
 

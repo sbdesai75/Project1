@@ -1,13 +1,25 @@
-body {
-    background-color: grey;
+html body {
+    /* background-color: rgba(0,0,0,1       00); */
+    background-image: url("https://images4.alphacoders.com/457/4574.jpg");
+    background-size: cover;
+    height: 100%;
 }
-
-.header {
+.navbar {
     background-color: black;
     height: 80px;
     color: #ffffff;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.navbar.img {
+    size: 50px 50px;
+}
+
+h1.animated {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 8px 8px 16px pink;
 }
 
 
@@ -19,29 +31,17 @@ body {
 
 
 
-h3, p {
-
-color:white;
+.p {
+font-size: 20px !important;
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 text-align:center;
 }
 
-button{
-    height:40px;
-    width:80px;
-    background:whitesmoke;
-    margin-top:20px;
-    
-    
-}
-.button_search{
-    text-align: center; 
-}
-
 
 #user{
+    display:block;
+    margin: auto;
     height:40px; 
-    width:350px;
     background: url('../images/200w.gif') no-repeat #ffffff;
         background-position: 98% 50%;
         background-size:40px 40px;
@@ -60,54 +60,114 @@ margin-left: 250px;
 
 #placeholder{
     height: 300px;
+    display: block;
+    margin: auto;
 }
 .iframe {
-    visibility: hidden;
+    display: none;
 }
 
-/* .gradient {
-    width: 100%;
-    height: 100%;
-    background: repeating-radial-gradient(circle, #7DD279, #7DD279 5px, #7984D2 5px, #7984D2 10px);
+.search {
+    margin: auto;
+    text-align: center;
 }
-
-
-.multicolor-linear {
-    background: linear-gradient(to left, lime, lime 28px, red 77%, cyan);
-  } */
-
-.lead {
-    color: green;
-}
-
-/* #yt-display { 
-    float: center;
- } */
-
-
-    
-
-/*#gif-wrap {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-	background-color: #000;
-	background-size: auto;
-	background-repeat: no-repeat;
-    background-position: center;
-    
-}*/
 .layout{
-    background-image: url("https://www.worshipbackgroundsforfree.com/wp-content/uploads/2012/11/Screen-shot-2012-11-20-at-8.31.59-AM.png");
-    background-size: cover;
+    display:none;
 }
 
-.jumbotron {
-    color: blue;
-    
+ /* .needs-validation{
+     margin-left: ;
+    } */
+
+#label-front {
+    color:white !important;
+    font-family:'Roboto Mono', monospace;
+    font-size: 18px;
+    font-stretch: expanded !important;
+    -webkit-animation: neon2 10s ease-in-out infinite alternate;
+    -moz-animation: neon2 10s ease-in-out infinite alternate;
+    animation: neon2 10s ease-in-out infinite alternate;
+}
+@keyframes neon2 {
+    from {
+        text-shadow: 0 0 4px #e6ccff, 0 0 8px #e6ccff, 0 0 12px #e6ccff, 0 0 16px #8000ff, 0 0 20px #8000ff, 0 0 24px #8000ff, 0 0 28px #8000ff, 0 0 40px #8000ff;
+    }
+    to {
+    text-shadow: 0 0 2px lightblue, 0 0 4px lightblue, 0 0 6px lightblue, 0 0 8px royalblue, 0 0 10px royalblue, 0 0 12px royalblue, 0 0 14px royalblue, 0 0 16px royalblue;
+    }
 }
 
 
+p, .p{
+    text-align: center;
+    font-size: 40px;
+    margin: 20px 0 20px 0;
+}
+       
+p:nth-child(1) a{
+    color: #fff;
+    font-family:'Roboto Mono', monospace;
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+}
+      
+@keyframes neon1 {
+    from {
+        text-shadow: 0 0 10px lightgreen, 0 0 20px lightgreen, 0 0 30px lightgreen, 0 0 40px greenyellow, 0 0 70px greenyellow, 0 0 80px greenyellow, 0 0 100px greenyellow, 0 0 150px greenyellow;
+    }
+    to {
+    text-shadow: 0 0 5px palevioletred, 0 0 10px palevioletred, 0 0 15px palevioletred, 0 0 20px red, 0 0 35px red, 0 0 40px red, 0 0 50px red, 0 0 75px red;
+    }
+}
+
+.p{
+    color: greenyellow;
+    font-family:'Roboto Mono', monospace;
+    -webkit-animation: neon3 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon3 1.5s ease-in-out infinite alternate;
+    animation: neon3 1.5s ease-in-out infinite alternate;
+}
+      
+@keyframes neon3 {
+    from {
+        text-shadow: 0 0 10px lightgreen, 0 0 20px lightgreen, 0 0 100px greenyellow, 0 0 150px greenyellow;
+    }
+    /* to {
+    text-shadow: 0 0 5px palevioletred, 0 0 10px palevioletred, 0 0 15px palevioletred, 0 0 20px red, 0 0 35px red, 0 0 40px red, 0 0 50px red, 0 0 75px red;
+    } */
+}
+
+
+/* code {
+    text-align: center;
+    font-size: 10px;
+    margin: 20px 0 20px 0;
+}
+       
+code:nth-child(1) a {
+    color: #fff;
+    font-family:'Roboto Mono', monospace;
+    -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+    animation: neon2 1.5s ease-in-out infinite alternate;
+}
+      
+@keyframes neon2 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px green, 0 0 70px green, 0 0 80px green, 0 0 100px green, 0 0 150px green;
+    }
+    to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px green, 0 0 35px green, 0 0 40px green, 0 0 50pxo green, 0 0 75px green;
+    }
+} */
+footer {
+    position: fixed;
+    margin-bottom: 0%;
+}
+.invalid-feedback {
+    text-align: center;
+}
+.valid-feedback{
+    text-align:center;
+}
